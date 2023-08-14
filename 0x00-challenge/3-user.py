@@ -2,9 +2,9 @@
 """
  User Model
 """
-import hashlib
-import uuid
 
+import uuid
+import hashlib
 
 class User():
     """
@@ -17,8 +17,8 @@ class User():
 
     def __init__(self):
         """
-        Initialize a new user:
-        - assigned an unique `id`
+        Initialize new user:
+        - assigned  unique `id`
         """
         self.id = str(uuid.uuid4())
 
@@ -46,7 +46,7 @@ class User():
         """
         Valid password:
         - `False` if `pwd` is `None`
-        - `False` if `pwd` is not a string
+        - `False` if `pwd` is not  string
         - `False` if `__password` is `None`
         - Compare `__password` and the MD5 value of `pwd`
         """
@@ -62,7 +62,7 @@ if __name__ == '__main__':
 
     user_1 = User()
     if user_1.id is None:
-        print("New User should have an id")
+        print("New User should have id")
 
     user_2 = User()
     if user_1.id == user_2.id:
@@ -101,3 +101,4 @@ password")
     if user_2.is_valid_password("No pwd"):
         print("is_valid_password should return False if no password set \
 before")
+
